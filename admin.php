@@ -21,6 +21,14 @@ $this->on('collections.entry.aside', function($name) use ($app) {
 });
 
 /**
+ * Add moderation markup to singletons sidebar.
+ */
+$this->on('singletons.form.aside', function($name) use ($app) {
+  $this->renderView("moderation:views/partials/singleton-aside.php");
+});
+
+
+/**
  * Initialize addon for admin pages.
  */
 $app->on('admin.init', function () use ($app)  {
